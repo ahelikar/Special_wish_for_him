@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+        
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@400;500;600&display=swap"
+          rel="stylesheet">
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="music" loop>
+    <source src="assets/music.mp4" type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     WEBSITE WRAPPER
+========================= -->
+
+<div class="website">
+
+
+    <!-- =========================
+         PAGE 1
+    ========================== -->
+
+    <section class="page active" id="page1">
+
+        <div class="welcome">
+
+            <p class="tiny-title">
+                A LITTLE SURPRISE FOR
+            </p>
+
+            <h1>
+                My Favourite<br>
+                Person ♡
+            </h1>
+
+            <p class="welcome-text">
+                I could have bought you something...
+                <br>
+                but I wanted to make you something.
+            </p>
+
+            <button class="volume-prompt-button" type="button" onclick="turnVolumeUp()">
+                Turn your volume up ♫
+            </button>
+
+            <div class="heart-decoration">
+                ♡
+            </div>
+
+            <button class="keep-going-button"
+                    onclick="nextPage()">
+
+                Keep going →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 2
+    ========================== -->
+
+    <section class="page" id="page2">
+
+
+        <div class="measurement">
+
+            <p class="script-heading">
+                measuring the cuteness
+            </p>
+
+
+            <div class="circle">
+
+                <div class="percentage">
+                    100%
+                </div>
+
+                <div class="circle-label">
+                    CUTENESS
+                </div>
+
+            </div>
+
+
+            <p class="script-heading bottom-text">
+                checking the blush levels...
+            </p>
+
+
+            <div class="loading">
+
+                <div class="loading-bar"></div>
+
+            </div>
+
+
+            <button class="keep-going-button"
+                    onclick="nextPage()">
+
+                Keep going →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 3
+    ========================== -->
+
+    <section class="page" id="page3">
+
+        <div class="letter-page">
+
+
+            <div class="photo-side">
+
+                <img src="assets/images (1).jpg"
+                     alt="Our memory">
+
+                <div class="photo-caption">
+                    just a little reminder
+                    <br>
+                    of someone special ♡
+                </div>
+
+            </div>
+
+
+            <div class="letter-side">
+
+                <h2>
+                    Dear [পেঁচা 🦉],
+                </h2>
+
+
+                <div class="letter-writing">
+
+                    <p>
+                        You make ordinary days feel
+                        a little more special.
+                    </p>
+
+                    <p>
+                        I don't always know how to say
+                        everything I feel, but I hope
+                        this little piece says some
+                        of it for me.
+                    </p>
+
+                    <p>
+                        Thank you for being you.
+                    </p>
+
+                </div>
+
+
+                <div class="signature">
+                    — [AHELI] ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="keep-going-button page-bottom"
+                onclick="nextPage()">
+
+            Keep going →
+
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 4
+    ========================== -->
+
+    <section class="page" id="page4">
+
+        <div class="memories">
+
+            <p class="tiny-title">
+                LITTLE THINGS I LOVE
+            </p>
+
+            <h2>
+                About You ♡
+            </h2>
+
+
+            <div class="memory-grid">
+
+
+                <button class="memory-card" type="button" aria-pressed="false">
+                    <span class="memory-card-inner">
+                        <span class="memory-card-face memory-card-front">
+                            <img src="assets/images (2).jpg" alt="A favorite memory together">
+                            <span class="memory-card-hint">tap to reveal ♡</span>
+                        </span>
+                        <span class="memory-card-face memory-card-back">
+                            <span class="memory-card-heart" aria-hidden="true">♡</span>
+                            <span class="memory-card-message">You make my favorite memories even better.</span>
+                        </span>
+                    </span>
+                </button>
+
+                <button class="memory-card" type="button" aria-pressed="false">
+                    <span class="memory-card-inner">
+                        <span class="memory-card-face memory-card-front">
+                            <img src="assets/images (3).jpg" alt="A favorite memory together">
+                            <span class="memory-card-hint">tap to reveal ♡</span>
+                        </span>
+                        <span class="memory-card-face memory-card-back">
+                            <span class="memory-card-heart" aria-hidden="true">♡</span>
+                            <span class="memory-card-message">I love all the little things you do.</span>
+                        </span>
+                    </span>
+                </button>
+
+                <button class="memory-card" type="button" aria-pressed="false">
+                    <span class="memory-card-inner">
+                        <span class="memory-card-face memory-card-front">
+                            <img src="assets/images (4).jpg" alt="A favorite memory together">
+                            <span class="memory-card-hint">tap to reveal ♡</span>
+                        </span>
+                        <span class="memory-card-face memory-card-back">
+                            <span class="memory-card-heart" aria-hidden="true">♡</span>
+                            <span class="memory-card-message">"Literally us." And I wouldn't have it any other way.</span>
+                        </span>
+                    </span>
+                </button>
+
+                <button class="memory-card" type="button" aria-pressed="false">
+                    <span class="memory-card-inner">
+                        <span class="memory-card-face memory-card-front">
+                            <img src="assets/images (7).jpg" alt="A favorite memory together">
+                            <span class="memory-card-hint">tap to reveal ♡</span>
+                        </span>
+                        <span class="memory-card-face memory-card-back">
+                            <span class="memory-card-heart" aria-hidden="true">♡</span>
+                            <span class="memory-card-message">And simply... you. That's my favorite thing.</span>
+                        </span>
+                    </span>
+                </button>
+
+            </div>
+
+
+            <button class="keep-going-button"
+                    onclick="nextPage()">
+
+                Keep going →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 5
+    ========================== -->
+
+    <section class="page" id="page5">
+
+        <div class="certificate">
+
+
+            <p class="tiny-title">
+                SOMETHING OFFICIAL
+            </p>
+
+
+            <div class="certificate-box">
+
+                <div class="certificate-small">
+                    THIS CERTIFICATE IS PROUDLY PRESENTED TO
+                </div>
+
+
+                <h1>
+                    [পেঁচা 🦉]
+                </h1>
+
+
+                <div class="certificate-title">
+                    WORLD'S<br>
+                    FAVOURITE PERSON
+                </div>
+
+
+                <div class="certificate-line"></div>
+
+
+                <p>
+                    For being wonderfully,
+                    ridiculously,
+                    undeniably special.
+                </p>
+
+
+                <div class="certificate-details">
+
+                
+
+                    <span>
+                        VALID UNTIL<br>
+                        ∞
+                    </span>
+
+                </div>
+
+
+                <div class="seal">
+                    ♡
+                </div>
+
+
+                <div class="certificate-signature">
+                    [AHELI KAR]
+                </div>
+
+            </div>
+
+            <button class="keep-going-button" type="button" onclick="nextPage()">
+                Keep going →
+            </button>
+
+            
+
+        </div>
+
+    </section>
+
+
+
+
+<!-- PAGE 6 -->
+<section class="page">
+    <div class="page-content forever-page">
+
+        <p class="tiny-title">ONE VERY IMPORTANT QUESTION</p>
+
+        <h1>Will you be my<br>
+            <span>forever?</span> ♡
+        </h1>
+
+        <div class="cat-scene">
+            <div class="cat">
+                😼🔪
+                <p>me</p>
+            </div>
+
+            <div class="heart">♡</div>
+
+            <div class="cat scared-cat">
+                😨
+                <p>you</p>
+            </div>
+        </div>
+
+        <p class="forever-text">
+            Choose wisely...
+        </p>
+
+        <div class="answer-area">
+            <button id="yesBtn" class="love-btn">
+                YES ♡
+            </button>
+
+            <button id="noBtn" class="no-btn">
+                NO
+            </button>
+        </div>
+
+        <div id="goodBoy" class="good-boy">
+            <div class="celebration">🐱💗🐱</div>
+
+            <h2>That's my good boy. ♡</h2>
+
+            <p>
+                I knew you'd choose correctly. 😌
+            </p>
+
+            <p class="tiny-joke">
+                You had absolutely no choice anyway.
+            </p>
+        </div>
+
+        <button class="keep-going-button" type="button" onclick="nextPage()">
+            Keep going →
+        </button>
+
+    </div>
+</section>
+    <section class="page" id="page6">
+
+        <div class="future">
+
+
+            <p class="tiny-title">
+                OUR LITTLE UNIVERSE
+            </p>
+
+
+            <h2>
+                Things I hope we do ♡
+            </h2>
+
+
+            <div class="wish-list">
+
+                <div>
+                    <span>01</span>
+                    More random conversations
+                </div>
+
+                <div>
+                    <span>02</span>
+                    More photographs together
+                </div>
+
+                <div>
+                    <span>03</span>
+                    More places to explore
+                </div>
+
+                <div>
+                    <span>04</span>
+                    More stupid jokes
+                </div>
+
+                <div>
+                    <span>05</span>
+                    More memories
+                </div>
+
+                <div>
+                    <span>06</span>
+                    And whatever comes next...
+                </div>
+
+            </div>
+
+            <button class="keep-going-button" type="button" onclick="nextPage()">
+                Keep going →
+            </button>
+
+            
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PAGE 7
+    ========================== -->
+
+    <section class="page final-page" id="page7">
+
+        <div class="final-content">
+
+
+            <div class="final-heart">
+                ♡
+            </div>
+
+
+            <p class="script-heading">
+                before you leave...
+            </p>
+
+
+            <h1>
+                I'm really glad
+                <br>
+                it's you.
+            </h1>
+
+
+            <p class="final-message">
+
+                Happy Boyfriend's Day ♡
+
+            </p>
+
+
+            <p class="small-final">
+
+                No bugs.<br>
+                No crashes.<br>
+                No uninstall option.
+
+            </p>
+
+
+            <p class="forever">
+                You're stuck with me. ♡
+            </p>
+
+
+            <div class="made-by">
+
+                made with love + a little bit of code
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<!-- PAGE COUNTER -->
+
+<div class="page-counter">
+
+    <span id="currentPage">1</span>
+    /
+    8
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
