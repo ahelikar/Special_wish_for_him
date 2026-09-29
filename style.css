@@ -1,0 +1,1570 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        #1b92fa;
+
+    color: #123b68;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   WEBSITE
+======================================== */
+
+.website {
+
+    width: 100%;
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ========================================
+   PAGE
+======================================== */
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        #abe3fa;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(100%);
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease;
+
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0);
+
+}
+
+
+.page.previous {
+
+    transform:
+        translateX(-100%);
+
+}
+
+
+/* ========================================
+   PAPER TEXTURE
+======================================== */
+
+.page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.18;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            #926db9 0.7px,
+            transparent 0.7px
+        );
+
+    background-size:
+        12px 12px;
+
+}
+
+
+/* ========================================
+/* ========================================
+   WELCOME PAGE
+======================================== */
+
+.welcome {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 700px;
+
+}
+
+
+.tiny-title {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #174d7c;
+
+    margin-bottom: 25px;
+
+}
+
+
+.welcome h1 {
+
+    font-size:
+        clamp(55px, 10vw, 110px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    color: #123b68;
+
+}
+
+
+.welcome-text {
+
+    margin-top: 40px;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+}
+
+
+.volume-prompt-button {
+
+    margin-top: 16px;
+
+    padding: 8px 16px;
+
+    border: 1px solid #123b68;
+
+    border-radius: 20px;
+
+    background: #e7f5fa;
+
+    color: #123b68;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+
+}
+
+
+.volume-prompt-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.heart-decoration {
+
+    font-size: 70px;
+
+    margin:
+        25px 0;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.keep-going-button {
+
+    border: 1px solid #123b68;
+
+    background: #ffffff;
+
+    color: #123b68;
+
+    padding:
+        13px 25px;
+
+    border-radius:
+        30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        0.3s;
+
+}
+
+
+.keep-going-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(100,20,50,0.2);
+
+}
+
+
+.keep-going-button.page-bottom {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    right: 40px;
+
+    z-index: 5;
+
+}
+
+
+/* ========================================
+   PAGE 2
+======================================== */
+
+.measurement {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(500px, 90%);
+
+    text-align: center;
+
+}
+
+
+.script-heading {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 28px;
+
+    color: #472ab3;
+
+}
+
+
+.circle {
+
+    width: 230px;
+
+    height: 230px;
+
+    border-radius: 50%;
+
+    margin:
+        45px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border:
+        3px solid transparent;
+
+    background:
+        linear-gradient(#f9e9e7, #f9e9e7)
+        padding-box,
+
+        linear-gradient(
+            90deg,
+            #17bcf8,
+            #0352fd,
+            #6e54ef
+        )
+        border-box;
+
+}
+
+
+.percentage {
+
+    font-size: 55px;
+
+    color: #123b68;
+
+}
+
+
+.circle-label {
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+}
+
+
+.bottom-text {
+
+    margin-bottom: 30px;
+
+}
+
+
+.loading {
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        #b2dff9;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.loading-bar {
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        #581cf1;
+
+    animation:
+        loading 2s ease;
+
+}
+
+
+@keyframes loading {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   LETTER PAGE
+======================================== */
+
+.letter-page {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(900px, 95%);
+
+    height:
+        min(650px, 80vh);
+
+    display: grid;
+
+    grid-template-columns:
+        40% 60%;
+
+    background:
+        #cc25de;
+
+    border-radius:
+        18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(80,20,40,0.2);
+
+}
+
+
+.photo-side {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.photo-side img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.photo-caption {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 25px;
+
+    color: rgb(175, 218, 245);
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 20px;
+
+    text-shadow:
+        0 2px 8px #000;
+
+}
+
+
+.letter-side {
+
+    padding: 60px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.letter-side h2 {
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+
+}
+
+
+.letter-writing {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 23px;
+
+    line-height: 1.7;
+
+}
+
+
+.letter-writing p {
+
+    margin-bottom: 18px;
+
+}
+
+
+.signature {
+
+    margin-top: auto;
+
+    text-align: right;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 25px;
+
+}
+
+
+/* ========================================
+   MEMORIES
+======================================== */
+
+.memories {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(900px, 95%);
+
+    text-align: center;
+
+}
+
+
+.memories h2 {
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+
+
+.memory-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.memory-card {
+
+    position: relative;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    aspect-ratio: 4 / 5;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    text-align: center;
+
+    transform:
+        rotate(-2deg);
+
+}
+
+
+.memory-card-inner {
+
+    position: absolute;
+
+    inset: 0;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.75, 0.25, 1);
+
+}
+
+
+.memory-card.is-flipped .memory-card-inner {
+
+    transform:
+        rotateY(180deg);
+
+}
+
+
+.memory-card-face {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 10px;
+
+    background: #fff9f5;
+
+    box-shadow:
+        0 10px 30px
+        rgba(80,20,40,0.12);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+.memory-card:nth-child(2) {
+
+    transform:
+        rotate(2deg);
+
+}
+
+
+.memory-card:nth-child(3) {
+
+    transform:
+        rotate(-1deg);
+
+}
+
+
+.memory-card:nth-child(4) {
+
+    transform:
+        rotate(2deg);
+
+}
+
+
+.memory-card-front img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    min-height: 0;
+
+    flex: 1;
+
+}
+
+
+.memory-card-hint {
+
+    padding: 9px 0 1px;
+
+    color: #174d7c;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 17px;
+
+}
+
+
+.memory-card-back {
+
+    align-items: center;
+
+    gap: 12px;
+
+    transform:
+        rotateY(180deg);
+
+}
+
+
+.memory-card-heart {
+
+    color: #c087e6;
+
+    font-size: 35px;
+
+    line-height: 1;
+
+}
+
+
+.memory-card-message {
+
+    padding: 0 5px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+
+}
+
+
+.memory-card:focus-visible {
+
+    outline: 3px solid #177bb1;
+
+    outline-offset: 5px;
+
+}
+
+
+/* ========================================
+   CERTIFICATE
+======================================== */
+
+.certificate {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    width:
+        min(800px, 95%);
+
+}
+
+
+.certificate-box {
+
+    position: relative;
+
+    margin:
+        30px auto 40px;
+
+    padding:
+        50px 60px;
+
+    background:
+        #480984;
+
+    border:
+        1px solid #a4e3fa;
+
+    box-shadow:
+        inset 0 0 0 10px #73b6e2,
+        inset 0 0 0 11px #6ad8fd;
+
+}
+
+
+.certificate-small {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.certificate-box h1 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(45px, 8vw, 75px);
+
+    font-weight: 500;
+
+    color: #382bf8;
+
+    margin:
+        20px 0;
+
+}
+
+
+.certificate-title {
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.certificate-line {
+
+    width: 150px;
+
+    height: 1px;
+
+    background: #93baf8;
+
+    margin: 25px auto;
+
+}
+
+
+.certificate-box p {
+
+    font-size: 18px;
+
+    font-style: italic;
+
+}
+
+
+.certificate-details {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    text-align: left;
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.seal {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid #68e1f6;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 30px auto 10px;
+
+    font-size: 30px;
+
+}
+
+
+.certificate-signature {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 24px;
+
+}
+
+
+/* ========================================
+   FUTURE PAGE
+======================================== */
+
+.future {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(700px, 90%);
+
+    text-align: center;
+
+}
+
+
+.future h2 {
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+
+
+.wish-list {
+
+    text-align: left;
+
+    margin-bottom: 45px;
+
+}
+
+
+.wish-list div {
+
+    padding:
+        18px 10px;
+
+    border-bottom:
+        1px solid #7a58cf;
+
+    font-size: 20px;
+
+}
+
+
+.wish-list span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #1f90ac;
+
+    margin-right: 25px;
+
+}
+
+
+/* ========================================
+   FINAL PAGE
+======================================== */
+
+.final-page {
+
+    text-align: center;
+
+}
+
+
+.final-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    transform: translateY(-12px);
+
+}
+
+
+.final-heart {
+
+    font-size: 90px;
+
+    color: #7783ec;
+
+    animation:
+        heartbeat 1.4s infinite;
+
+}
+
+
+.final-content h1 {
+
+    font-size:
+        clamp(55px, 10vw, 100px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    color: #242c72;
+
+    margin:
+        30px 0;
+
+}
+
+
+.final-message {
+
+    font-size: 25px;
+
+}
+
+
+.small-final {
+
+    margin-top: 35px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+}
+
+
+.forever {
+
+    margin-top: 25px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 30px;
+
+}
+
+
+.made-by {
+
+    margin-top: 60px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+
+}
+
+
+.forever-page {
+
+    transform: translateY(-12px);
+
+}
+
+
+@media (max-height: 760px) {
+
+    .forever-page {
+
+        transform: translateY(-40px);
+
+    }
+
+    .forever-page .tiny-title {
+
+        margin-bottom: 14px;
+
+    }
+
+    .forever-page h1 {
+
+        font-size: 36px;
+
+    }
+
+    .forever-page h1 span {
+
+        font-size: 46px;
+
+    }
+
+    .cat-scene {
+
+        gap: 24px;
+
+        margin: 18px 0 10px;
+
+    }
+
+    .cat {
+
+        font-size: 45px;
+
+    }
+
+    .forever-text {
+
+        margin: 10px 0;
+
+    }
+
+    .answer-area {
+
+        height: 72px;
+
+    }
+
+    .good-boy {
+
+        margin-top: 8px;
+
+    }
+
+    .good-boy h2 {
+
+        margin: 5px 0;
+
+        font-size: 32px;
+
+    }
+
+    .good-boy p {
+
+        font-size: 18px;
+
+    }
+
+    .celebration {
+
+        font-size: 32px;
+
+    }
+
+    .tiny-joke {
+
+        margin-top: 8px;
+
+    }
+
+    .final-content {
+
+        transform: translateY(-20px);
+
+    }
+
+    .final-content h1 {
+
+        margin: 20px 0;
+
+    }
+
+    .small-final {
+
+        margin-top: 20px;
+
+    }
+
+    .forever {
+
+        margin-top: 15px;
+
+    }
+
+    .made-by {
+
+        margin-top: 30px;
+
+    }
+
+}
+
+
+/* ========================================
+   PAGE COUNTER
+======================================== */
+
+.page-counter {
+
+    position: fixed;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 50;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #9a7afa;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+
+    .page {
+
+        padding: 20px;
+
+    }
+
+
+    .welcome h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .letter-page {
+
+        height: 78vh;
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            40% 60%;
+
+    }
+
+
+    .letter-side {
+
+        padding:
+            25px;
+
+        overflow-y: auto;
+
+    }
+
+
+    .letter-side h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .letter-writing {
+
+        font-size: 19px;
+
+    }
+
+
+    .memory-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .memories h2,
+    .future h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .certificate-box {
+
+        padding:
+            35px 25px;
+
+    }
+
+
+    .certificate-title {
+
+        font-size: 19px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .certificate-box h1 {
+
+        font-size: 48px;
+
+    }
+
+
+}
+
+.certificate,
+.certificate .tiny-title,
+.certificate-box h1 {
+    color: #bfe7ff;
+}
+
+.page#page5 .keep-going-button {
+    border-color: #bfe7ff;
+    background: #ffffff;
+    color: #123b68;
+}/* =========================
+   FOREVER PAGE
+========================= */
+
+.forever-page {
+    text-align: center;
+    position: relative;
+}
+
+.tiny-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.forever-page h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.forever-page h1 span {
+    font-family: "Dancing Script", cursive;
+    font-size: 55px;
+}
+
+.cat-scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin: 35px 0 20px;
+}
+
+.cat {
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat p {
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
+    margin: 3px 0;
+}
+
+.scared-cat {
+    transform: rotate(5deg);
+}
+
+.heart {
+    font-size: 35px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+.forever-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.answer-area {
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.love-btn,
+.no-btn {
+    border: none;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.love-btn {
+    background: #28478b;
+    color: white;
+}
+
+.love-btn:hover {
+    transform: scale(1.08);
+}
+
+.no-btn {
+    background: #3e9db7;
+    color: #bfe7ff;
+    position: relative;
+}
+
+.good-boy {
+    display: none;
+    margin-top: 25px;
+    animation: appear 0.8s ease forwards;
+}
+
+.good-boy.show {
+    display: block;
+}
+
+.good-boy h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 38px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.good-boy p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.celebration {
+    font-size: 40px;
+}
+
+.tiny-joke {
+    font-size: 14px !important;
+    opacity: 0.65;
+    margin-top: 15px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@media (max-height: 760px) {
+
+    .page#page5 .certificate-box {
+
+        margin: 14px auto 18px;
+
+        padding: 28px 42px;
+
+    }
+
+    .page#page5 .certificate-box h1 {
+
+        margin: 12px 0;
+
+        font-size: clamp(42px, 6vw, 60px);
+
+    }
+
+    .page#page5 .certificate-line {
+
+        margin: 12px auto;
+
+    }
+
+    .page#page5 .certificate-details {
+
+        margin-top: 18px;
+
+    }
+
+    .page#page5 .seal {
+
+        width: 56px;
+
+        height: 56px;
+
+        margin: 18px auto 6px;
+
+    }
+
+    .page#page5 .keep-going-button {
+
+        padding: 10px 22px;
+
+    }
+
+}
