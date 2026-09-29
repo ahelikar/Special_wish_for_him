@@ -7,5 +7,5 @@ Area of customization/changes:
 4.Upload your pictures and rename them as given .
 5.You can also change the mp4 according to your preference
 
-Here is the live link for the website/project
+Here is the live link for the website/project:
 https://idyllic-sorbet-fcb9fd.netlify.app/
